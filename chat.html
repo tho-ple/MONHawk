@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MONHawk</title>
+  <link rel="icon" href="icons/icon32.png" />
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+  <header id="bar">
+    <div class="brand-row">
+      <h1 class="brand" title="MONHawk – eyes on every chat">
+        <span class="wm-m">M</span><span class="wm-on">ON</span><span class="wm-hawk">HAWK</span>
+      </h1>
+      <div class="bar-actions">
+        <button id="filter-yt" class="toggle on" title="Show/hide YouTube messages">YT</button>
+        <button id="filter-tw" class="toggle on" title="Show/hide Twitch messages">TW</button>
+        <div class="menu-wrap">
+          <button id="filter-menu-btn" title="Show/hide HOST, MOD and BOT messages">👁<span id="hidden-count"></span></button>
+          <div id="filter-menu" hidden>
+            <div class="menu-title">Show messages from</div>
+            <label><input type="checkbox" id="filter-host" /> Streamer <span class="role owner">HOST</span></label>
+            <label><input type="checkbox" id="filter-mod" /> Moderators <span class="role mod">MOD</span></label>
+            <label><input type="checkbox" id="filter-bot" /> Bots <span class="role">BOT</span></label>
+          </div>
+        </div>
+        <button id="open-settings" title="Settings">⚙</button>
+      </div>
+    </div>
+    <div class="status-row">
+      <div class="status" id="st-yt"><span class="dot"></span><span class="badge badge-yt">YT</span><span class="label">connecting…</span></div>
+      <div class="status" id="st-tw"><span class="dot"></span><span class="badge badge-tw">TW</span><span class="label">connecting…</span></div>
+    </div>
+  </header>
+
+  <section id="settings" hidden>
+    <label>Twitch channel
+      <input id="set-twitch" placeholder="mon_official" />
+    </label>
+    <label>YouTube channels (IDs or @handles, comma-separated)
+      <input id="set-yt" placeholder="UCVsSnnJ8fL5PwOokVLsbAMw" />
+    </label>
+    <label>Bot accounts (comma-separated, Twitch &amp; YouTube)
+      <textarea id="set-bots" rows="3"></textarea>
+    </label>
+    <label>Font size
+      <input id="set-font" type="range" min="11" max="24" step="1" />
+    </label>
+    <div class="row">
+      <button id="save-settings" class="primary">Save &amp; reconnect</button>
+      <button id="close-settings">Close</button>
+    </div>
+  </section>
+
+  <section id="pins"></section>
+
+  <main id="feed"></main>
+  <button id="jump" hidden>↓ New messages</button>
+
+  <script src="chat.js"></script>
+</body>
+</html>

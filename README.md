@@ -122,3 +122,7 @@ docs/           screenshot for this README
 ## Ideas / not yet implemented
 
 Sending messages (needs Twitch/Google login), mod tools, user cards with message history, recent-message history on join, FFZ emotes, highlight words and sounds, a transparent OBS overlay of the pinned message.
+
+## License
+
+[MIT](LICENSE)

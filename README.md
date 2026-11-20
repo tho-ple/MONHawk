@@ -25,7 +25,7 @@ MONHawk isn't in any extension store (yet), so you load it as an *unpacked* exte
 
 **First, download it:**
 - On GitHub click **Code → Download ZIP** and unzip it somewhere permanent (e.g. `Documents\MONHawk`), **or**
-- `git clone https://github.com/<your-account>/MONHawk.git`
+- `git clone https://github.com/tho-ple/MONHawk.git`
 
 > Don't delete or move the folder afterwards – the browser loads the extension from it.
 
